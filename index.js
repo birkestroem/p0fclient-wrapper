@@ -2,11 +2,11 @@ const execFile = require('child_process').execFile;
 const debug = require('debug')('p0fclient-wrapper')
 const defaultOptions = {
     'clientPath': '/usr/local/bin/p0f-client', 
-    'socketPath': '/var/run/p0f/p0f.sock'
+    'socketPath': '/var/run/p0f.sock'
 };
 
 module.exports = function(ip, options) {
-    const opts = Object.assign(options || {}, defaultOptions);
+    const opts = Object.assign({}, defaultOptions, options);
     debug('Options: ' + require('util').inspect(opts, { depth: null }));
 
     return new Promise((resolve, reject) => {
