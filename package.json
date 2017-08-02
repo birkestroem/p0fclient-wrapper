@@ -1,0 +1,14 @@
+{
+  "name": "p0fclient-wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sudo p0f -d -f /etc/p0f/p0f.fp -s /var/run/p0f.sock -u `whoami`"
+  },
+  "author": "Jesper Birkestrøm <jesper@birkestroem.dk>",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "2.6.8"
+  }
+}
